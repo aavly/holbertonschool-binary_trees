@@ -49,5 +49,8 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		node = node->left;
 	}
 
+	if (depth == 1 && !tree->left && !tree->right)
+		return (1);
+
 	return (is_tree_perfect(tree, depth, level));
 }
