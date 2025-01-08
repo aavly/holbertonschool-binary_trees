@@ -36,11 +36,12 @@ int is_tree_perfect(const binary_tree_t *tree, size_t depth, size_t level)
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	size_t depth = 0, level = 0;
+	const binary_tree_t *node;
 
 	if (!tree)
 		return (0);
 
-	const binary_tree_t *node = tree;
+	node = tree;
 
 	while (node)
 	{
